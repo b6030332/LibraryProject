@@ -1,0 +1,15 @@
+\\fs-stu-home.hallam.shu.ac.uk\FS-STU-HOME6\2\b6025922\MyWork\Visual Studio 2017\Library\Library.Service\bin\Debug\Library.Service.dll.config
+\\fs-stu-home.hallam.shu.ac.uk\FS-STU-HOME6\2\b6025922\MyWork\Visual Studio 2017\Library\Library.Service\bin\Debug\Library.Service.dll
+\\fs-stu-home.hallam.shu.ac.uk\FS-STU-HOME6\2\b6025922\MyWork\Visual Studio 2017\Library\Library.Service\bin\Debug\Library.Service.pdb
+\\fs-stu-home.hallam.shu.ac.uk\FS-STU-HOME6\2\b6025922\MyWork\Visual Studio 2017\Library\Library.Service\bin\Debug\EntityFramework.dll
+\\fs-stu-home.hallam.shu.ac.uk\FS-STU-HOME6\2\b6025922\MyWork\Visual Studio 2017\Library\Library.Service\bin\Debug\EntityFramework.SqlServer.dll
+\\fs-stu-home.hallam.shu.ac.uk\FS-STU-HOME6\2\b6025922\MyWork\Visual Studio 2017\Library\Library.Service\bin\Debug\Library.Data.dll
+\\fs-stu-home.hallam.shu.ac.uk\FS-STU-HOME6\2\b6025922\MyWork\Visual Studio 2017\Library\Library.Service\bin\Debug\Library.Data.pdb
+\\fs-stu-home.hallam.shu.ac.uk\FS-STU-HOME6\2\b6025922\MyWork\Visual Studio 2017\Library\Library.Service\bin\Debug\Library.Data.dll.config
+\\fs-stu-home.hallam.shu.ac.uk\FS-STU-HOME6\2\b6025922\MyWork\Visual Studio 2017\Library\Library.Service\bin\Debug\EntityFramework.xml
+\\fs-stu-home.hallam.shu.ac.uk\FS-STU-HOME6\2\b6025922\MyWork\Visual Studio 2017\Library\Library.Service\bin\Debug\EntityFramework.SqlServer.xml
+\\fs-stu-home.hallam.shu.ac.uk\FS-STU-HOME6\2\b6025922\MyWork\Visual Studio 2017\Library\Library.Service\obj\Debug\Library.Service.csprojAssemblyReference.cache
+\\fs-stu-home.hallam.shu.ac.uk\FS-STU-HOME6\2\b6025922\MyWork\Visual Studio 2017\Library\Library.Service\obj\Debug\Library.Service.csproj.CoreCompileInputs.cache
+\\fs-stu-home.hallam.shu.ac.uk\FS-STU-HOME6\2\b6025922\MyWork\Visual Studio 2017\Library\Library.Service\obj\Debug\Library.Service.csproj.CopyComplete
+\\fs-stu-home.hallam.shu.ac.uk\FS-STU-HOME6\2\b6025922\MyWork\Visual Studio 2017\Library\Library.Service\obj\Debug\Library.Service.dll
+\\fs-stu-home.hallam.shu.ac.uk\FS-STU-HOME6\2\b6025922\MyWork\Visual Studio 2017\Library\Library.Service\obj\Debug\Library.Service.pdb
