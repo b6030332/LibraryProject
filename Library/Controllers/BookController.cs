@@ -1,5 +1,6 @@
 ﻿using Library.Data.IDAO;
 using Library.Data.Models;
+using Library.Models.Book;
 using Library.Service.Service;
 using System;
 using System.Collections.Generic;
@@ -20,13 +21,42 @@ namespace Library.Controllers
         }
         public ActionResult GetBooks()
         {
-            IEnumerable<Book> books = _dao.GetBooks();
-            return View("GetBooks", books);
+            var bookModels = _dao.GetBooks();
+
+            var listingResult = bookModels
+                .Select(result => new BookListingModel
+                {
+                    Id = result.Id,
+                    Image = result.Image,
+                    Title = result.Title,
+                    Author = result.Author,
+                    DeweyClassification = result.DeweyClassification,
+            });
+            var model = new BookModel()
+            {
+                Books = listingResult
+            };
+
+            return View(model);
+
+
         }
         public ActionResult GetBook(int id)
         {
-            Book book = _dao.GetBook(id);
-            return View("GetBook", book);
+            var book = _dao.GetBook(id);
+
+            var model = new BookDetailModel()
+            {
+                BookId = id,
+                Title = book.Title,
+                Year = book.Year,
+                Status = book.Status.Name,
+                Image = book.Image,
+                Author = book.Author,
+                DeweyClassification = book.DeweyClassification,
+                ISBN = book.ISBN
+            };
+            return View(model);
         }
         // GET: Book
         public ActionResult Index()

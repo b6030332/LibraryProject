@@ -1,70 +1,37 @@
-﻿@model IEnumerable<Library.Data.Models.Book>
+﻿@model Library.Models.Book.BookModel
 
-@{
-    ViewBag.Title = "GetBooks";
-}
+ <div id="Books">
+     <h3>Library Catalogue</h3>
+     <div id="bookTable">
+         <table class="table table-condensed" id="bookTable">
+             <thead>
+                 <tr>
+                     <th>Image</th>
+                     <th>Title</th>
+                     <th>Author</th>
+                     <th>Dewey Classification</th>
+                 </tr>
+             </thead>
+             <tbody>
+                @foreach (var book in Model.Books)
+                 {
+                 <tr class="bookRow">
+                     <td class="">
+                         <a asp-controller="Book" asp-action="GetBook" asp-route-id="@book.Id">
+                             <img src="@book.Image" class="imageCell" />
+                         </a>
+                     </td>
+                     <td>
+                     @Html.ActionLink(book.Title, "GetBook",
+                    new { id = book.Id , Controller = "Book"})
+                     @* <td class="">@book.Title</td>*@
+                     <td class="">@book.Author</td>
+                     <td class="">@book.DeweyClassification</td>
 
-<h2>GetBooks</h2>
+                 </tr>
+                 }
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Image)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Author)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Year)
-        </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.ISBN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DeweyClassification)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Quantity)
-        </th>*@
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Image)
-        </td>
-        <td>
-            @*Html.DisplayFor(modelItem => item.Title)*@
-            @Html.ActionLink(item.Title, "GetBook",
-           new { id = item.Id , Controller ="Book"})
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Author)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Year)
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.ISBN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DeweyClassification)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Quantity)
-        </td>*@
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
-</table>
+             </tbody>
+         </table>
+     </div>
+ </div>

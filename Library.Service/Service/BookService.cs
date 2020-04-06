@@ -21,12 +21,16 @@ namespace Library.Service.Service
 
         public Book GetBook(int id)
         {
-            return _context.Book.Find(id);
+            return _context.Book
+                .Include(book => book.Status)
+                .FirstOrDefault(book => book.Id == id);
+                
         }
         public IEnumerable<Book> GetBooks()
         {
             return _context.Book
                 .Include(book => book.Status);
+                
 
         }
 
