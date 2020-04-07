@@ -56,6 +56,10 @@
     <Compile Include="Migrations\202004051443166_First Migration.Designer.cs">
       <DependentUpon>202004051443166_First Migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004072015380_included extra book columns.cs" />
+    <Compile Include="Migrations\202004072015380_included extra book columns.Designer.cs">
+      <DependentUpon>202004072015380_included extra book columns.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\MembershipNo.cs" />
@@ -73,6 +77,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202004051443166_First Migration.resx">
       <DependentUpon>202004051443166_First Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004072015380_included extra book columns.resx">
+      <DependentUpon>202004072015380_included extra book columns.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

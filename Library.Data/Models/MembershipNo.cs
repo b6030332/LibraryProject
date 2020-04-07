@@ -9,7 +9,7 @@ namespace Library.Data.Models
     public class MembershipNo
     {
         public int Id { get; set; }
-        public decimal Fees { get; set; }
+        public double Fees { get; set; }
         public DateTime DateAssigned { get; set; }
         public virtual IEnumerable<Withdrawal> Withdrawals { get; set; }
 }

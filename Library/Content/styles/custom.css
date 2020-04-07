@@ -1,0 +1,13 @@
+﻿.detailImage {
+    width: 200px;
+    padding: 6px;
+}
+.imageCell{
+    width: 120px;
+    padding: 10px;
+}
+#bookBlurb{
+    font-size:0.8em;
+}
+
+
