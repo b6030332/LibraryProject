@@ -45,7 +45,7 @@ namespace Library.Service.Service
             _book.Publisher = book.Publisher; _book.Format = book.Format;
             _book.Price = book.Price; _book.Blurb = book.Blurb;
             _book.ISBN = book.ISBN; _book.DeweyClassification = book.DeweyClassification;
-            _book.Status = book.Status;
+            _book.Status = _book.Status; book.Status_Id = book.Status_Id;
             _context.SaveChanges();
         }
     }

@@ -14,9 +14,9 @@ namespace Library.Models.Book
         public int Year { get; set; }
         public long ISBN { get; set; }
         public string DeweyClassification { get; set; }
-        public string Status { get; set; }
         public string Image { get; set; }
         public string PatronName { get; set; }
+        public string Status { get; set; }
         public Withdrawal LatestWithdrawal { get; set; }
         public IEnumerable<WithdrawalHistory> WithdrawalHistory { get; set; }
 

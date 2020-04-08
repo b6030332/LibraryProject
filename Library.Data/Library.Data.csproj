@@ -61,6 +61,14 @@
     <Compile Include="Migrations\202004072015380_included extra book columns.Designer.cs">
       <DependentUpon>202004072015380_included extra book columns.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004081125127_adding status_id.cs" />
+    <Compile Include="Migrations\202004081125127_adding status_id.Designer.cs">
+      <DependentUpon>202004081125127_adding status_id.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004081520590_reverting back to status.cs" />
+    <Compile Include="Migrations\202004081520590_reverting back to status.Designer.cs">
+      <DependentUpon>202004081520590_reverting back to status.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\MembershipNo.cs" />
@@ -81,6 +89,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004072015380_included extra book columns.resx">
       <DependentUpon>202004072015380_included extra book columns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004081125127_adding status_id.resx">
+      <DependentUpon>202004081125127_adding status_id.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004081520590_reverting back to status.resx">
+      <DependentUpon>202004081520590_reverting back to status.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -21,23 +21,8 @@ namespace Library.Controllers
         }
         public ActionResult GetBooks()
         {
-            var bookModels = _dao.GetBooks();
-
-            var listingResult = bookModels
-                .Select(result => new BookListingModel
-                {
-                    Id = result.Id,
-                    Image = result.Image,
-                    Title = result.Title,
-                    Author = result.Author,
-                    DeweyClassification = result.DeweyClassification,
-            });
-            var model = new BookModel()
-            {
-                Books = listingResult
-            };
-
-            return View(model);
+            IEnumerable<Book> books = _dao.GetBooks();
+            return View("GetBooks", books);
 
 
         }
@@ -50,9 +35,9 @@ namespace Library.Controllers
                 BookId = id,
                 Title = book.Title,
                 Year = book.Year,
-                Status = book.Status.Name,
                 Image = book.Image,
                 Author = book.Author,
+                Status = book.Status.Name,
                 DeweyClassification = book.DeweyClassification,
                 ISBN = book.ISBN
             };

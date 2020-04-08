@@ -7,7 +7,7 @@
 <h2>GetAllBooks</h2>
 
 <p>
-    @Html.ActionLink("Add Book", "AddBook", "BookAdmin")
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
@@ -43,6 +43,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status_Id)
         </th>
         <th></th>
     </tr>
@@ -83,10 +86,12 @@
             @Html.DisplayFor(modelItem => item.Quantity)
         </td>
         <td>
-            @Html.ActionLink("Edit", "UpdateBook", 
-           new { id=item.Id , Controller = "BookAdmin" }) |
-            @Html.ActionLink("Delete", "DeleteBook",
-           new { id=item.Id, Controller = "BookAdmin" }) 
+            @Html.DisplayFor(modelItem => item.Status_Id)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

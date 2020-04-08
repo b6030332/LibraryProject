@@ -53,7 +53,7 @@ namespace Library.Controllers
         public ActionResult UpdateBook(int id)
         {
             Book book = _bookService.GetBook(id);
-            ViewBag.Status = new SelectList(_statusService.GetStatus(), "Id", "Name", book.Status);
+            ViewBag.Status_Id = new SelectList(_statusService.GetStatus(), "Id", "Name", book.Status_Id);
             return View(book);
         }
        
@@ -61,11 +61,11 @@ namespace Library.Controllers
         [HttpPost]
         public ActionResult Edit(int id, Book book)
         {
-            _bookService.UpdateBook(book);
+                 _bookService.UpdateBook(book);
 
             try
             {
-                _bookService.UpdateBook(book);
+                 _bookService.UpdateBook(book);
 
 
                 return RedirectToAction("GetBooks", "Book", book);

@@ -1,43 +1,49 @@
-﻿@model Library.Models.Book.BookModel
+﻿@model IEnumerable<Library.Data.Models.Book>
 
- <div id="Books">
-     <h3>Library Catalogue</h3>
-     <div id="bookTable">
-         <p>@Html.ActionLink("Add Book", "AddBook", "BookAdmin")</p>
-         <table class="table table-condensed" id="bookTable">
-             <thead>
-                 <tr>
-                     <th>Image</th>
-                     <th>Title</th>
-                     <th>Author</th>
-                     <th>Dewey Classification</th>
-                 </tr>
-             </thead>
-             <tbody>
-                @foreach (var book in Model.Books)
-                 {
-                 <tr class="bookRow">
-                     <td class="">
-                         <a asp-controller="Book" asp-action="GetBook" asp-route-id="@book.Id">
-                             <img src="@book.Image" class="imageCell" />
-                         </a>
-                     </td>
-                     <td>
-                     @Html.ActionLink(book.Title, "GetBook",
-                    new { id = book.Id , Controller = "Book"})
-                     @* <td class="">@book.Title</td>*@
-                     <td class="">@book.Author</td>
-                     <td class="">@book.DeweyClassification</td>
-                     
-                     <td>@Html.ActionLink("Edit", "UpdateBook",
-                     new { id = book.Id, Controller = "BookAdmin" })</td>
-                     
-                     <td>@Html.ActionLink("Delete", "DeleteBook",
-                     new { id = book.Id, Controller = "BookAdmin" })</td>
-                 </tr>
-                 }
+@{
+    ViewBag.Title = "GetBooks";
+}
 
-             </tbody>
-         </table>
-     </div>
- </div>
+<h2>GetBooks</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Dewey Classification</th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+               <img src="@Html.DisplayFor(modelItem => item.Image)" class="imageCell" />
+            </td>
+            <td>
+                @Html.ActionLink(item.Title, "GetBook",
+                    new { id = item.Id , Controller = "Book" })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeweyClassification)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "UpdateBook",
+               new { id = item.Id , Controller = "BookAdmin" }) |
+               
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

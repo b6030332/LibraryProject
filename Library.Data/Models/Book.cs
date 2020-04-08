@@ -22,13 +22,13 @@ namespace Library.Data.Models
         public string Format { get; set; }
         public double Price { get; set; }
         public string Blurb { get; set; }
-        public Status Status { get; set; }
         [Required]
         public Int64 ISBN { get; set; }
         [Required]
         public string DeweyClassification { get; set; }
-        public int Quantity { get; set; }
-
+        public int Quantity { get; set; }
+        public Nullable<int> Status_Id { get; set; }
+        public virtual Status Status { get; set; }
 
     }
 }
