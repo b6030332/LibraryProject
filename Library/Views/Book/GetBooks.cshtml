@@ -3,6 +3,7 @@
  <div id="Books">
      <h3>Library Catalogue</h3>
      <div id="bookTable">
+         <p>@Html.ActionLink("Add Book", "AddBook", "BookAdmin")</p>
          <table class="table table-condensed" id="bookTable">
              <thead>
                  <tr>
@@ -27,7 +28,12 @@
                      @* <td class="">@book.Title</td>*@
                      <td class="">@book.Author</td>
                      <td class="">@book.DeweyClassification</td>
-
+                     
+                     <td>@Html.ActionLink("Edit", "UpdateBook",
+                     new { id = book.Id, Controller = "BookAdmin" })</td>
+                     
+                     <td>@Html.ActionLink("Delete", "DeleteBook",
+                     new { id = book.Id, Controller = "BookAdmin" })</td>
                  </tr>
                  }
 

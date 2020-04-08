@@ -7,15 +7,8 @@ using System.Threading.Tasks;
 
 namespace Library.Data.IDAO
 {
-    public interface IBookDAO
+   public interface IStatusDAO
     {
-        IEnumerable<Book> GetBooks();
-
-        Book GetBook(int id);
-
-        IList<Book> GetAllBooks();
-        void UpdateBook(Book book);
-
-        
+        IList<Status> GetStatus();
     }
 }

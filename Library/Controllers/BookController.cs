@@ -58,6 +58,11 @@ namespace Library.Controllers
             };
             return View(model);
         }
+        public ActionResult GetAllBooks()
+        {
+            IList<Book> books = _dao.GetAllBooks();
+            return View("GetAllBooks", books);
+        }
         // GET: Book
         public ActionResult Index()
         {
