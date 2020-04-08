@@ -13,6 +13,10 @@ namespace Library.Models.Book
         public string Author { get; set; }
         public int Year { get; set; }
         public long ISBN { get; set; }
+        public string Format { get; set; }
+        public string Blurb { get; set; }
+        public string Publisher { get; set; }
+        public double Price { get; set; }
         public string DeweyClassification { get; set; }
         public string Image { get; set; }
         public string PatronName { get; set; }

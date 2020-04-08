@@ -69,6 +69,10 @@
     <Compile Include="Migrations\202004081520590_reverting back to status.Designer.cs">
       <DependentUpon>202004081520590_reverting back to status.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004081739414_fixing status.cs" />
+    <Compile Include="Migrations\202004081739414_fixing status.Designer.cs">
+      <DependentUpon>202004081739414_fixing status.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\MembershipNo.cs" />
@@ -95,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004081520590_reverting back to status.resx">
       <DependentUpon>202004081520590_reverting back to status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004081739414_fixing status.resx">
+      <DependentUpon>202004081739414_fixing status.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

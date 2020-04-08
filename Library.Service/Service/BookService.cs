@@ -19,6 +19,18 @@ namespace Library.Service.Service
             _context = new LibraryContext();
         }
 
+        public void AddBook(Book book)
+        {
+            _context.Book.Add(book);
+            _context.SaveChanges();
+        }
+
+        public void DeleteBook(Book book)
+        {
+            _context.Book.Remove(book);
+            _context.SaveChanges();
+        }
+
         public IList<Book> GetAllBooks()
         {
             return _context.Book.ToList();
@@ -45,7 +57,7 @@ namespace Library.Service.Service
             _book.Publisher = book.Publisher; _book.Format = book.Format;
             _book.Price = book.Price; _book.Blurb = book.Blurb;
             _book.ISBN = book.ISBN; _book.DeweyClassification = book.DeweyClassification;
-            _book.Status = _book.Status; book.Status_Id = book.Status_Id;
+            _book.Status = _book.Status;
             _context.SaveChanges();
         }
     }

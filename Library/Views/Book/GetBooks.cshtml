@@ -7,7 +7,7 @@
 <h2>GetBooks</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add Book", "AddBook", "BookAdmin")
 </p>
 <table class="table">
     <tr>
@@ -41,7 +41,8 @@
                 @Html.ActionLink("Edit", "UpdateBook",
                new { id = item.Id , Controller = "BookAdmin" }) |
                
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                @Html.ActionLink("Delete", "DeleteBook",
+               new { id = item.Id , Controller = "BookAdmin" })
             </td>
         </tr>
     }

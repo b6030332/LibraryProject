@@ -27,8 +27,7 @@ namespace Library.Data.Models
         [Required]
         public string DeweyClassification { get; set; }
         public int Quantity { get; set; }
-        public Nullable<int> Status_Id { get; set; }
-        public virtual Status Status { get; set; }
+        public Status Status { get; set; }
 
     }
 }

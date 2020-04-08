@@ -36,10 +36,14 @@ namespace Library.Controllers
                 Title = book.Title,
                 Year = book.Year,
                 Image = book.Image,
+                Blurb = book.Blurb,
+                Format = book.Format,
+                Price = book.Price,
+                Publisher = book.Publisher,
                 Author = book.Author,
-                Status = book.Status.Name,
                 DeweyClassification = book.DeweyClassification,
-                ISBN = book.ISBN
+                ISBN = book.ISBN,
+                Status = book.Status.Name
             };
             return View(model);
         }

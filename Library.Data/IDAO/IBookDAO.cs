@@ -14,7 +14,13 @@ namespace Library.Data.IDAO
         Book GetBook(int id);
 
         IList<Book> GetAllBooks();
+
         void UpdateBook(Book book);
+
+        void AddBook(Book book);
+
+        void DeleteBook(Book book);
+
 
         
     }

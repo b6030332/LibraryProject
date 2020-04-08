@@ -188,6 +188,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\azkaban.jpeg" />
     <Content Include="Content\images\incoldblood.jpg" />
     <Content Include="Content\images\mindhunter.jpg" />
     <Content Include="Content\images\protecting.jpg" />
@@ -247,6 +248,8 @@
     <Content Include="Views\Admin\Admin.cshtml" />
     <Content Include="Views\Book\GetAllBooks.cshtml" />
     <Content Include="Views\Book\GetBooks.cshtml" />
+    <Content Include="Views\BookAdmin\AddBook.cshtml" />
+    <Content Include="Views\BookAdmin\DeleteBook.cshtml" />
     <Content Include="Views\BookAdmin\UpdateBook.cshtml" />
   </ItemGroup>
   <ItemGroup>

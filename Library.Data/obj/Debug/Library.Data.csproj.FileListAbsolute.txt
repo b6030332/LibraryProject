@@ -43,3 +43,4 @@ F:\MyWork\Visual Studio 2017\GitHub\Library.Data\obj\Debug\Library.Data.pdb
 F:\MyWork\Visual Studio 2017\GitHub\Library.Data\obj\Debug\Library.Data.Migrations.includedextrabookcolumns.resources
 F:\MyWork\Visual Studio 2017\GitHub\Library.Data\obj\Debug\Library.Data.Migrations.addingstatus_id.resources
 F:\MyWork\Visual Studio 2017\GitHub\Library.Data\obj\Debug\Library.Data.Migrations.revertingbacktostatus.resources
+F:\MyWork\Visual Studio 2017\GitHub\Library.Data\obj\Debug\Library.Data.Migrations.fixingstatus.resources

@@ -27,21 +27,22 @@ namespace Library.Controllers
             return View();
         }
 
-        // GET: BookAdmin/Create
-        public ActionResult Create()
+        [HttpGet]
+        public ActionResult AddBook()
         {
+          
             return View();
         }
 
         // POST: BookAdmin/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult AddBook(Book book)
         {
             try
             {
-                // TODO: Add insert logic here
+                _bookService.AddBook(book);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("GetBooks", "Book", book);
             }
             catch
             {
@@ -53,22 +54,20 @@ namespace Library.Controllers
         public ActionResult UpdateBook(int id)
         {
             Book book = _bookService.GetBook(id);
-            ViewBag.Status_Id = new SelectList(_statusService.GetStatus(), "Id", "Name", book.Status_Id);
             return View(book);
         }
        
         // POST: BookAdmin/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, Book book)
+        public ActionResult UpdateBook(int id, Book book)
         {
-                 _bookService.UpdateBook(book);
-
+                 
             try
             {
                  _bookService.UpdateBook(book);
 
 
-                return RedirectToAction("GetBooks", "Book", book);
+                return RedirectToAction("GetBook", "Book", book);
             }
             catch
             {
@@ -77,20 +76,22 @@ namespace Library.Controllers
         }
 
         // GET: BookAdmin/Delete/5
-        public ActionResult Delete(int id)
+        [HttpGet]
+        public ActionResult DeleteBook(int id)
         {
-            return View();
+            return View(_bookService.GetBook(id));
         }
 
         // POST: BookAdmin/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult DeleteBook(int id, Book book)
         {
             try
             {
-                // TODO: Add delete logic here
+                Book books = _bookService.GetBook(id);
+                _bookService.DeleteBook(books);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("GetBooks", "Book", id);
             }
             catch
             {
